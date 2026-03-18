@@ -23,7 +23,7 @@ public class EnemyController : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
     
-    private void OnTriggerEnter2D(Collider collision)
+    private void OnTriggerEnter(Collider collision)
     {
         /*target = collision.gameObject;
         OnRange = true;
@@ -32,7 +32,7 @@ public class EnemyController : MonoBehaviour
             _animator.SetBool("Chase", true);
             
     }
-    private void OnTriggerExit2D(Collider collision)
+    private void OnTriggerExit(Collider collision)
     {
         /*OnRange = false;
         CheckEndingConditions();*/
@@ -40,7 +40,7 @@ public class EnemyController : MonoBehaviour
             _animator.SetBool("Chase", false);
 
     }
-    private void OnCollisionEnter2D(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         /*OnAttackRange = true;
         CheckEndingConditions();*/
@@ -48,7 +48,7 @@ public class EnemyController : MonoBehaviour
             CurrentState = EnemyStates.Attack;*/
 
     }
-    private void OnCollisionExit2D(Collision collision)
+    private void OnCollisionExit(Collision collision)
     {
         /*if (collision.gameObject == target)
             CurrentState = EnemyStates.Chase;*/

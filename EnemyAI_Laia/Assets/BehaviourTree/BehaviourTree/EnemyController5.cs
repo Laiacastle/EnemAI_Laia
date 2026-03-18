@@ -23,20 +23,20 @@ public class EnemyController5 : MonoBehaviour
         AttackDistance = GetComponent<SphereCollider>().radius / 2f;
         ChangeState();
     }
-    private void OnTriggerEnter2D(Collider collision)
+    private void OnTriggerEnter(Collider collision)
     {
         chase.check = true;
         target = collision.gameObject;
     } 
-    private void OnTriggerExit2D(Collider collision)
+    private void OnTriggerExit(Collider collision)
     {
         chase.check = false;
     }
-    private void OnTriggerStay2D(Collider collision)
+    private void OnTriggerStay(Collider collision)
     {
         attack.check = (target.transform.position-transform.position).magnitude <= AttackDistance;
     }
-    private void OnCollisionEnter2D(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         OnHurt();
     }

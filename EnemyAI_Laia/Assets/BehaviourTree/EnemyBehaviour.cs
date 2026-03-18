@@ -22,15 +22,15 @@ public class EnemyBehaviour : MonoBehaviour
         dead = new Condition("Dead");
         SelectState();
     }
-    private void OnTriggerEnter2D(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         chaseRange.check = true;
     }
-    private void OnTriggerStay2D(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         attackRange.check = (target.transform.position - transform.position).magnitude <= _attackDistance;
     }
-    private void OnTriggerExit2D(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         chaseRange.check = false;
     }
