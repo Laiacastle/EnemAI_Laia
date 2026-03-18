@@ -18,7 +18,7 @@ public class EnemyController : MonoBehaviour
    void Start()
     {
         _chaseB = GetComponent<ChaseBehaviour>();
-        AttackRange = GetComponent<SphereCollider>().radius / 2f;
+        AttackRange = GetComponent<CapsuleCollider>().radius / 2f;
         Debug.Log(AttackRange);
         _animator = GetComponent<Animator>();
     }
